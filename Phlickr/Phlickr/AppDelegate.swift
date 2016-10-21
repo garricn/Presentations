@@ -15,8 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let frame = UIScreen.mainScreen().bounds
         window = UIWindow(frame: frame)
-        window?.rootViewController = ViewController()
+        window?.rootViewController = UINavigationController(rootViewController: resolvedVC())
         window?.makeKeyAndVisible()
         return true
     }
+}
+
+func resolvedVC() -> UIViewController {
+    return ViewController(
+        viewModel: ViewModel(
+            fetcher: Fetcher()
+        )
+    )
 }

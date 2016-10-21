@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0814751DB9DFF1007FAEC5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0814741DB9DFF1007FAEC5 /* ViewModel.swift */; };
+		4E546EBD1DBAB69C003ACF44 /* PhlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E546EBC1DBAB69C003ACF44 /* PhlickrPhoto.swift */; };
+		4E783DB01DB9DB21001C5840 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E783DAF1DB9DB21001C5840 /* Fetcher.swift */; };
 		4EF161521DB9B9F000934B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF161511DB9B9F000934B85 /* AppDelegate.swift */; };
 		4EF161541DB9B9F000934B85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF161531DB9B9F000934B85 /* ViewController.swift */; };
 		4EF161591DB9B9F000934B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF161581DB9B9F000934B85 /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0814741DB9DFF1007FAEC5 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4E546EBC1DBAB69C003ACF44 /* PhlickrPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhlickrPhoto.swift; sourceTree = "<group>"; };
+		4E783DAF1DB9DB21001C5840 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		4EF1614E1DB9B9F000934B85 /* Phlickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phlickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF161511DB9B9F000934B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF161531DB9B9F000934B85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,9 @@
 				4EF161581DB9B9F000934B85 /* Assets.xcassets */,
 				4EF1615A1DB9B9F000934B85 /* LaunchScreen.storyboard */,
 				4EF1615D1DB9B9F000934B85 /* Info.plist */,
+				4E783DAF1DB9DB21001C5840 /* Fetcher.swift */,
+				4E0814741DB9DFF1007FAEC5 /* ViewModel.swift */,
+				4E546EBC1DBAB69C003ACF44 /* PhlickrPhoto.swift */,
 			);
 			path = Phlickr;
 			sourceTree = "<group>";
@@ -206,7 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E783DB01DB9DB21001C5840 /* Fetcher.swift in Sources */,
+				4E546EBD1DBAB69C003ACF44 /* PhlickrPhoto.swift in Sources */,
 				4EF161541DB9B9F000934B85 /* ViewController.swift in Sources */,
+				4E0814751DB9DFF1007FAEC5 /* ViewModel.swift in Sources */,
 				4EF161521DB9B9F000934B85 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
