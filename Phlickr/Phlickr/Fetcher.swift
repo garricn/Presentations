@@ -14,7 +14,6 @@ protocol ErrorOutputing {
 
 protocol Fetching: ErrorOutputing {
     var output: Observable<NSDictionary> { get }
-
     func fetch(with request: NSMutableURLRequest)
 }
 

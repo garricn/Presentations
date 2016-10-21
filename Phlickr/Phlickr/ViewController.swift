@@ -27,10 +27,10 @@ class ViewController: UITableViewController {
         refreshControl?.addTarget(self, action: #selector(refresh), forControlEvents: .ValueChanged)
         refreshControl?.beginRefreshing()
 
-        viewModel.output.onNext { photos in
+        viewModel.doneLoadingOutput.onNext { [weak self] in
             dispatch_async(dispatch_get_main_queue()) {
-                self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
+                self?.tableView.reloadData()
+                self?.refreshControl?.endRefreshing()
             }
         }
 

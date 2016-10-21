@@ -16,18 +16,25 @@ protocol TableViewDataSource {
     func heightForRow(at indexPath: NSIndexPath) -> CGFloat
 }
 
-typealias PhlickrPhotos = [PhlickrPhoto]
-protocol ViewModeling: TableViewDataSource {
-    var output: Observable<PhlickrPhotos> { get }
+protocol Loading {
+    var doneLoadingOutput: Observable<Void> { get }
+}
+
+protocol Refreshing {
     func refresh()
 }
 
+protocol ViewModeling: TableViewDataSource, Loading, Refreshing {}
 
 class ViewModel: ViewModeling {
-    let output = Observable<PhlickrPhotos>()
+    let doneLoadingOutput = Observable<Void>()
 
     private let fetcher: Fetching
-    private var photos: PhlickrPhotos = []
+    private var photos: [PhlickrPhoto] = [] {
+        didSet {
+            self.doneLoadingOutput.emit()
+        }
+    }
 
     init(fetcher: Fetching) {
         self.fetcher = fetcher
@@ -40,7 +47,6 @@ class ViewModel: ViewModeling {
 
             let photos = photosArray.flatMap { PhlickrPhoto(dictionary: $0) }
             self.photos = photos
-            self.output.emit(photos)
         }
     }
 
