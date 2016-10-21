@@ -1,0 +1,4 @@
+target 'Phlickr' do
+  use_frameworks!
+  pod 'GGNObservable'
+end
