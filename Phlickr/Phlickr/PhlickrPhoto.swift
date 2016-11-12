@@ -24,10 +24,10 @@ struct PhlickrPhoto {
             let secret = dictionary["secret"] as? String
             else { return nil }
 
-        let imageResourceString = "https://farm\(farmID).staticflickr.com/\(serverID)/\(photoID)_\(secret)_z.jpg"
+        let resourceString = "https://farm\(farmID).staticflickr.com/\(serverID)/\(photoID)_\(secret)_z.jpg"
 
         guard
-            let encoded = imageResourceString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()),
+            let encoded = resourceString.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()),
             let url = NSURL(string: encoded),
             let data = NSData(contentsOfURL: url),
             let image = UIImage(data: data)
