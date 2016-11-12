@@ -20,7 +20,7 @@ class ViewController: UITableViewController {
     }
 
     func refresh() {
-        let query = "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=b139e4f1a3a51778332012ca260bf060&gallery_id=72157664540660544&format=json&nojsoncallback=1"
+        let query = "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=\(Private.apiKey)&gallery_id=72157664540660544&format=json&nojsoncallback=1"
         let encoded = query.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         let url = NSURL(string: encoded)!
         let request = NSMutableURLRequest(URL: url)
